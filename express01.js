@@ -5,6 +5,10 @@ app.get('/', function(req, res){
 	res.type('text/plain');
 	res.send('CiaoCiao dalla app.get');
 });
+app.get('/about', function(req,res){
+	res.type('text/plain');
+	res.send('Qwerty Siamo una piccola società che non lavora');
+});
 app.use(function(req, res){
 	res.type('text/plain');
 	res.status(404);
