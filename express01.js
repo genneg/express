@@ -1,6 +1,10 @@
 var express= require('express');
 var app = express();
 app.set('port', process.env.PORT || 3000);
+app.get('/', function(req, res){
+	res.type('text/plain');
+	res.send('CiaoCiao dalla app.get');
+});
 app.use(function(req, res){
 	res.type('text/plain');
 	res.status(404);
